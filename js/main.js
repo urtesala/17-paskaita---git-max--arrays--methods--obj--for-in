@@ -48,7 +48,7 @@ numbers.forEach((sk, i) => console.log(`index ${i}, reiksme ${sk}`));
 const allNums = numbers.every((sk) => typeof sk === "number");
 console.log("allNums ===", allNums);
 
-//?ar visi yra teiiami?
+//?ar visi yra teigiami?
 const allNumsPositives = numbers.every((sk) => sk > 0);
 console.log("allNums ===", allNumsPositives);
 

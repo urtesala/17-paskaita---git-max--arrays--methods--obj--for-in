@@ -128,6 +128,15 @@ const peopleWithId = people.map((pObj, i) => {
 
 // 9. sukurti funkcija kuri gaudama id istrina ta masyvo elementa. deletPerson(p_02)
 
+function deletePerson(id) {
+  people = people.filter((pObj) => pObj.id !== id);
+  console.log(
+    "people after delete ===",
+    people.map(({ name }) => name)
+  );
+  renderList(people, pplContainer);
+}
+
 // 10. parasyti funkcija kuri sukuria ir grazina viena zmogaus kortele tokiu pavidalu
 `
   <article class="card">
@@ -150,8 +159,12 @@ function makePerson({ name, surname, sex, age, income, hasCar, id }) {
     <p class="driver-icon ${
       hasCar ? "driver" : ""
     }"><i class="fa fa-car fa-3x" aria-hidden="true"></i></p>
-    <button id="delete">delete</button>
     `;
+  // <button id="delete">delete</button>
+  const buttonEl = document.createElement("button");
+  buttonEl.textContent = "delete me";
+  articleEl.append(buttonEl);
+  buttonEl.addEventListener("click", () => deletePerson(id));
   // nusitaikyti ir uzdeti event listeneri mygtukui
   return articleEl;
 }
@@ -171,7 +184,7 @@ renderList(people, pplContainer);
 
 // 12. su 11to pratimo funkcija rikiuojam ir atrenkam elementus i sarasa mygtuku paspaudimais.
 `
-    <button>Rodyti tik vyrus</button>
+    <button class='on'>Rodyti tik vyrus --ON</button>
     <button>Rodyti tik moteris</button>
     <button>isrikiuoti pagal pajamas</button>
     <button>isrikiuoti pagal amziu</button>

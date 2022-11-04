@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript project</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <!-- itraukiu javascript -->
+    <script src="./js/main.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Javascript project</title>
-  <link rel="stylesheet" href="./style/style.css" />
-  <!-- itraukiu javascript -->
-  <script src="./js/main.js" defer></script>
-</head>
-
-<body>
-  <div class="container">
-    <h1>New_project</h1>
-  </div>
-</body>
-
+  <body>
+    <div class="container">
+      <h1>New_project</h1>
+      <fieldset>
+        <legend>Valdymo skydas</legend>
+        <button>Rodyti tik vyrus</button>
+        <button>Rodyti tik moteris</button>
+        <button>isrikiuoti pagal pajamas</button>
+        <button>isrikiuoti pagal amziu</button>
+      </fieldset>
+      <div id="people-container" class="people-container">
+        <article class="card">
+          <h3>Severija Piktutytė</h3>
+          <h4>26 metu moteris</h4>
+          <p>atlyginimas: 1300 eur</p>
+          <p class=""><i class="fa fa-car" aria-hidden="true"></i></p>
+          <button id="delete">delete</button>
+        </article>
+      </div>
+    </div>
+  </body>
 </html>
